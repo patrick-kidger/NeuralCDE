@@ -4,6 +4,19 @@ Every experiment is contained in an easy to run Python file.
 
 A lot of repositories tend to use command-line interfaces for running scripts - we do more or less the same thing here, with the Python interface. We find this is usually easier to understand, and easier to query the results afterwards.
 
+### Requirements
+We used:
++ Ubuntu 18.04.4 LTS
++ Python 3.7
++ PyTorch 1.3.1
++ torchaudio 0.3.2
++ torchdiffeq 0.0.1
++ Sklearn 0.22.1
++ sktime 0.3.1
++ tqdm 4.42.1
+
+But more recent versions are likely to work as well.
+
 ### Example
 
 Train and evaluate a Neural CDE model on the speech commands dataset, return a result object, and check how well we did:
