@@ -12,9 +12,8 @@ We've wrapped it up into this tiny `controldiffeq` library, that:
 
 ### Installation
 ```
-pip install "git+https://github.com/patrick-kidger/NeuralCDE/#egg=controldiffeq&subdirectory=controldiffeq"
+pip install git+https://github.com/patrick-kidger/NeuralCDE.git
 ```
-Don't forget the quotation marks.
 
 Note that installation shouldn't be necessary if you're using it in our experiments. (The code their does some path-hacking to import it instead.)
 
