@@ -51,7 +51,7 @@ speech_commands.run_all(device='cuda')
 
 You might notice that you can use other UEA datasets, not just CharacterTrajectories! Give those a try as well if you like. :) (Valid dataset names can be found in [datasets/uea.py::valid_dataset_names](./datasets/uea.py).)
 
-Obviously running everything in one script like this will take forever, but you get the idea.
+Obviously running everything serially in one script like this will take forever (split it up over multiple devices by using separate scripts and specify different `device`s), but you get the idea.
 
 #### main
 
