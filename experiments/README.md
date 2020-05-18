@@ -2,7 +2,7 @@
 
 Every experiment is contained in an easy to run Python file.
 
-A lot of repositories tend to use command-line interfaces for running scripts - we do more or less the same thing here, except that it's Python interface that we use. We find this is easier to understand and easier to query the results afterwards!
+A lot of repositories tend to use command-line interfaces for running scripts - we do more or less the same thing here, with the Python interface. We find this is usually easier to understand, and easier to query the results afterwards.
 
 ### Example
 

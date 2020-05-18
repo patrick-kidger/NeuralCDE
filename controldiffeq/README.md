@@ -47,7 +47,7 @@ The goal is to find the response `z` driven by the control `X`. For our purposes
 ```
 dz/dt = f(z)dX/dt     z(t_0) = z0
 ```
-where the right hand side describes a matrix-vector product between `f(z)` an `dX/dt`.
+where the right hand side describes a matrix-vector product between `f(z)` and `dX/dt`.
 
 This is solved by
 ```python
@@ -63,5 +63,4 @@ where `t` is a one-dimensional Tensor of shape `(length,)`, giving observation t
 ```
 spline = NaturalCubicSpline(t, coeffs)
 ```
-and then `spline.derivative` passed to `cdeint` asin the examples.
-```
+and then `spline.derivative` passed to `cdeint` as described above.
