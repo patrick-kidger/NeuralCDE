@@ -1,3 +1,0 @@
-include LICENSE
-include *.py
-prune setup.py

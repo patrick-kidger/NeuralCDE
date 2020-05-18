@@ -5,7 +5,7 @@ import setuptools
 here = pathlib.Path(__file__).resolve().parent
 
 
-with open(here / 'README.md', 'r') as f:
+with open(here / 'controldiffeq/README.md', 'r') as f:
     readme = f.read()
 
 
@@ -22,6 +22,6 @@ setuptools.setup(name='controldiffeq',
                  zip_safe=False,
                  python_requires='>=3.5, <4',
                  install_requires=['torch>=1.0.0'],
-                 packages=setuptools.find_packages(),
+                 packages=['controldiffeq'],
                  classifiers=["Programming Language :: Python :: 3",
                               "License :: OSI Approved :: Apache Software License"])
