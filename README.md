@@ -1,4 +1,6 @@
-# Neural Controlled Differential Equations for Irregular Time Series [[arXiv](TODO)]
+<h1 align='center'> Neural Controlled Differential Equations<br>
+    for Irregular Time Series<br>
+    [<a href="https://arxiv.org/abs/TODO">arXiv</a>] </h1>
 
 <p align="center">
 <img align="middle" src="./imgs/main.png" width="666" />
