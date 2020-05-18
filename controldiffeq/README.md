@@ -8,12 +8,15 @@ We've wrapped it up into this tiny `controldiffeq` library, that:
 + Computes natural cubic splines from data with missing values.
 + Wraps around `torchdiffeq.odeint[_adjoint]` to make computing CDEs a bit easier.
 
-Both of these are standard stuff that you can get elsewhere - we're just putting it in one place for convenience. :)
-
 ----
 
 ### Installation
-Just copy this folder and import it.
+```
+pip install "git+https://github.com/patrick-kidger/NeuralCDE/#egg=controldiffeq&subdirectory=controldiffeq"
+```
+Don't forget the quotation marks.
+
+Note that installation shouldn't be necessary if you're using it in our experiments. (The code their does some path-hacking to import it instead.)
 
 ### Example
 See [example.py](./example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.

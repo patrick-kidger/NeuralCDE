@@ -22,5 +22,6 @@ setuptools.setup(name='controldiffeq',
                  zip_safe=False,
                  python_requires='>=3.5, <4',
                  install_requires=['torch>=1.0.0'],
+                 packages=setuptools.find_packages(),
                  classifiers=["Programming Language :: Python :: 3",
                               "License :: OSI Approved :: Apache Software License"])
