@@ -29,6 +29,7 @@ Tested with:
 + Python 3.7
 + PyTorch 1.3.1
 + Sklearn 0.22.1
+
 but more recent versions are likely to work as well.
 
 ### Citation
