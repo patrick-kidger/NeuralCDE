@@ -65,6 +65,6 @@ Obviously running everything in one script like this will take forever, but you 
 
 + Every `main()` also takes the following *optional* arguments: `device`, `max_epochs`, `dry_run`, specifying the PyTorch device to run on, the maximum number of epochs to train for (early stopping may kick in before this though), and whether to save the result to disk or not.
 
-+ `uea` has a *mandatory* argument `dataset_name`, which should be set to any one of the UEA datasets as discussed above, and should be a string. It has an  *optional* argument `missing_rate* to set the missing rate of the data, which should be a a float between 0 and 1.
++ `uea` has a *mandatory* argument `dataset_name`, which should be set to any one of the UEA datasets as discussed above, and should be a string. It has an  *optional* argument `missing_rate` to set the missing rate of the data, which should be a a float between 0 and 1.
 
 + `sepsis` has a *mandatory* argument `intenstity`, which should a boolean specifying whether to use observational intensity or not. It has an *optional* argument `pos_weight`, which describes how much to weight the positive samples in the loss function. (Useful because this is an imbalanced classification problem.)
