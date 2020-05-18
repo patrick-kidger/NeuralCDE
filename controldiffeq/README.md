@@ -15,7 +15,7 @@ We've wrapped it up into this tiny `controldiffeq` library, that:
 pip install git+https://github.com/patrick-kidger/NeuralCDE.git
 ```
 
-Note that installation shouldn't be necessary if you're using it in our experiments. (The code their does some path-hacking to import it instead.)
+Note that installation shouldn't be necessary for use from the experiments folder. (The code there does some path-hacking to import it instead.)
 
 ### Example
 See [example.py](./example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.
