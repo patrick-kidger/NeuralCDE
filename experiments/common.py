@@ -193,7 +193,7 @@ class _TensorEncoder(json.JSONEncoder):
             super(_TensorEncoder, self).default(o)
 
 
-def _save_results(name, results):
+def _save_results(name, result):
     loc = here / 'results' / name
     if not os.path.exists(loc):
         os.mkdir(loc)
@@ -203,22 +203,20 @@ def _save_results(name, results):
             num = max(num, int(filename))
         except ValueError:
             pass
-    for result in results:
-        result_to_save = result.copy()
-        del result_to_save['train_dataloader']
-        del result_to_save['val_dataloader']
-        del result_to_save['test_dataloader']
-        result_to_save['model'] = str(result_to_save['model'])
+    result_to_save = result.copy()
+    del result_to_save['train_dataloader']
+    del result_to_save['val_dataloader']
+    del result_to_save['test_dataloader']
+    result_to_save['model'] = str(result_to_save['model'])
 
-        num += 1
-        with open(loc / str(num), 'w') as f:
-            json.dump(result_to_save, f, cls=_TensorEncoder)
+    num += 1
+    with open(loc / str(num), 'w') as f:
+        json.dump(result_to_save, f, cls=_TensorEncoder)
 
 
 def main(name, times, train_dataloader, val_dataloader, test_dataloader, device, make_model, num_classes, max_epochs,
          lr, kwargs, step_mode, pos_weight=torch.tensor(1)):
     times = times.to(device)
-    results = []
     if device != 'cpu':
         torch.cuda.reset_max_memory_allocated(device)
         baseline_memory = torch.cuda.memory_allocated(device)
@@ -262,10 +260,9 @@ def main(name, times, train_dataloader, val_dataloader, test_dataloader, device,
                        train_metrics=train_metrics,
                        val_metrics=val_metrics,
                        test_metrics=test_metrics)
-    results.append(result)
     if name is not None:
-        _save_results(name, results)
-    return results
+        _save_results(name, result)
+    return result
 
 
 def make_model(name, input_channels, output_channels, hidden_channels, hidden_hidden_channels, num_hidden_layers,
