@@ -66,7 +66,9 @@ class NeuralCDE(torch.nn.Module):
         z_T = controldiffeq.cdeint(dX_dt=controldiffeq.NaturalCubicSpline(times, coeffs).derivative,
                                    z0=z0,
                                    func=self.func,
-                                   t=times[[0, -1]])
+                                   t=times[[0, -1]],
+                                   atol=1e-2,
+                                   rtol=1e-2)
         ######################
         # Both the initial value and the terminal value are returned from cdeint; extract just the terminal value,
         # and then apply a linear map.
