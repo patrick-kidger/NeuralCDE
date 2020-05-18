@@ -5,7 +5,7 @@ import setuptools
 here = pathlib.Path(__file__).resolve().parent
 
 
-with open(here / 'README.md', 'rb') as f:
+with open(here / 'README.md', 'r') as f:
     readme = f.read()
 
 
