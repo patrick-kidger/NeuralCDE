@@ -22,7 +22,11 @@ There are three main files, `uea.py`, `sepsis.py`, `speech_commands.py`. Each on
 `main()` trains and evaluates a single model and reports the results.
 `run_all()` trains and evaluates every model with the specific hyperparameters we selected, five times each.
 
-Note that the first time you run it on a particular dataset/model combination, it may take a reasonable amount of time to preprocess and save the dataset into the appropriate path format. This is just an implementation thing; there's some points which are unnecessarily serial - we just didn't try to parallelise this aspect of it since it only happens once.
+### First time
+
+The first time a particular dataset is run, it will be downloaded automatically.
+
+The first time a particular dataset/model combination is run, it may take a reasonable amount of time to preprocess and save the dataset into the appropriate format. This is just an implementation thing; there's some points which are unnecessarily serial - we just didn't try to parallelise this aspect of it since it only happens once.
 
 #### run_all
 
