@@ -1,13 +1,36 @@
-# Neural Controlled Differential Equations for Irregular Time Series
+# Neural Controlled Differential Equations for Irregular Time Series [[arXiv](TODO)]
 
-This is code for reproducing the experiments of the paper:
+<p align="center">
+<img align="middle" src="./imgs/img.png" width="666" />
+</p>
 
-> Patrick Kidger, James Morrill, James Foster, Terry Lyons, "Neural Controlled Differential Equations for Irregular Time Series".
+Building on the well-understood mathematical theory of _controlled differential equations_, we demonstrate how to construct models that:
++ Act directly on irregularly-sampled partially-observed multivariate time series.
++ May be trained with memory-efficient backpropagation - even across observations!
++ Outperform similar state of the art models.
 
-It also includes a small library to help compute Neural CDEs (essentially a convenience wrapper around the [`torchdiffeq`](https://github.com/rtqichen/torchdiffeq) library).
+They are also hassle-free to implement and evaluate using existing tools, in particular PyTorch and the [`torchdiffeq`](https://github.com/rtqichen/torchdiffeq) library.
+
+Code for reproducing experiments is provided, as is a convenience library `controldiffeq` to make computing Neural CDEs easy.
 
 ## Library
-The library is in the `controldiffeq` folder, which may be imported as a Python module: `import controldiffeq`. See the README file of that folder for more details on how to use it.
+The library is in the `controldiffeq` folder, which may be imported as a Python module: `import controldiffeq`. Further details [in the folder](./controldiffeq).
 
 ## Quick example
-See 
+An example can be found [here](https://github.com/patrick-kidger/NeuralCDE/blob/master/controldiffeq/example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.
+
+## Reproducing experiments
+Everything to reproduce the experiments of the paper can be found in the `experiments` folder. Further details [in the folder](https://github.com/patrick-kidger/NeuralCDE/tree/master/experiments).
+
+## Requirements
+Tested with Python 3.7 and PyTorch 1.3.1, but more recent versions are likely to work as well.
+
+## Citation
+```bibtex
+@article{kidger2020neuralcde,
+    author={Kidger, Patrick and Morrill, James and Foster, James and Lyons, Terry},
+    title={{Neural Controlled Differential Equations for Irregular Time Series}},
+    year={2020},
+    journal={arXiv:TODO}
+}
+```
