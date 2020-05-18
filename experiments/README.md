@@ -57,7 +57,7 @@ Obviously running everything in one script like this will take forever, but you 
 
 + If you want to run a single model, then the `main()` functions take the following *mandatory* keyword-only arguments: `model_name`, `hidden_channels`, `hidden_hidden_channels`, `num_hidden_layers`.
 
-    + Valid values for `model_name` are `ncde`, `odernn`, `gruode`, `dt`, `decay`, corresponding to a Neural CDE, ODE-RNN, GRU-ODE, GRU-dt, and GRU-D respectively.
+    + Valid values for `model_name` are `"ncde"`, `"odernn"`, `"gruode"`, `"dt"`, `"decay"`, corresponding to a Neural CDE, ODE-RNN, GRU-ODE, GRU-dt, and GRU-D respectively.
 
     + `hidden_channels` is the size of the hidden state.
 
