@@ -28,9 +28,13 @@ Everything to reproduce the experiments of the paper can be found in the [`exper
 Tested with:
 + Python 3.7
 + PyTorch 1.3.1
++ torchaudio 0.3.2
++ torchdiffeq 0.0.1
 + Sklearn 0.22.1
++ sktime 0.3.1
++ tqdm 4.42.1
 
-but more recent versions are likely to work as well.
+But more recent versions are likely to work as well.
 
 ### Citation
 ```bibtex
