@@ -174,7 +174,7 @@ def natural_cubic_spline_coeffs(t, X):
         forward pass, if at all possible.
 
     Returns:
-        Five tensors, which should in turn be passed to `controldiffeq.NaturalCubicSpline`.
+        Four tensors, which should in turn be passed to `controldiffeq.NaturalCubicSpline`.
 
         Why do we do it like this? Because typically you want to use PyTorch tensors at various interfaces, for example
         when loading a batch from a DataLoader. If we wrapped all of this up into just the
