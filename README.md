@@ -8,7 +8,7 @@
 
 Building on the well-understood mathematical theory of _controlled differential equations_, we demonstrate how to construct models that:
 + Act directly on irregularly-sampled partially-observed multivariate time series.
-+ May be trained with memory-efficient backpropagation - even across observations.
++ May be trained with memory-efficient adjoint backpropagation - even across observations.
 + Demonstrate state-of-the-art performance.
 
 They are straightforward to implement and evaluate using existing tools, in particular PyTorch and the [`torchdiffeq`](https://github.com/rtqichen/torchdiffeq) library.
