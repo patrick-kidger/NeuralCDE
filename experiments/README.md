@@ -15,18 +15,18 @@ print(result.test_metrics.accuracy)
 ```
 `hidden_channels` is the size of the hidden state. `hidden_hidden_channels` and `num_hidden_layers` describe the size of the feedforward network parameterising the vector fields of the Neural CDE and ODE-RNN models.
 
+### First time
+
+The first time a particular dataset is run, it will be downloaded automatically.
+
+The first time a particular dataset/model combination is run, it may take a reasonable amount of time to preprocess and save the dataset into the appropriate format. This is just an implementation thing; there's some points which are unnecessarily serial - we just didn't try to parallelise this aspect of it since it only happens once.
+
 ### Usage
 
 There are three main files, `uea.py`, `sepsis.py`, `speech_commands.py`. Each one has two functions, `main()` and `run_all()`.
 
 `main()` trains and evaluates a single model and reports the results.
 `run_all()` trains and evaluates every model with the specific hyperparameters we selected, five times each.
-
-### First time
-
-The first time a particular dataset is run, it will be downloaded automatically.
-
-The first time a particular dataset/model combination is run, it may take a reasonable amount of time to preprocess and save the dataset into the appropriate format. This is just an implementation thing; there's some points which are unnecessarily serial - we just didn't try to parallelise this aspect of it since it only happens once.
 
 #### run_all
 
