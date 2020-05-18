@@ -21,7 +21,7 @@ Code for reproducing experiments is provided, as well as a convenience library `
 The library is in the [`controldiffeq` folder](./controldiffeq), which may be imported as a Python module: `import controldiffeq`. Check the folder for details on how to use it.
 
 ### Quick example
-An example can be found [here](./controldiffeq/example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.
+An example can be found [here](./example/example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.
 
 <p align="center">
 <img align="middle" src="./imgs/spiral.png" width="666" />
