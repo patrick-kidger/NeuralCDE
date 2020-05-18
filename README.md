@@ -1,7 +1,7 @@
 # Neural Controlled Differential Equations for Irregular Time Series [[arXiv](TODO)]
 
 <p align="center">
-<img align="middle" src="./imgs/img.png" width="666" />
+<img align="middle" src="./imgs/main.png" width="666" />
 </p>
 
 Building on the well-understood mathematical theory of _controlled differential equations_, we demonstrate how to construct models that:
@@ -20,6 +20,10 @@ The library is in the [`controldiffeq` folder](./controldiffeq), which may be im
 
 ### Quick example
 An example can be found [here](./controldiffeq/example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.
+
+<p align="center">
+<img align="middle" src="./imgs/spiral.png" width="666" />
+</p>
 
 ### Reproducing experiments
 Everything to reproduce the experiments of the paper can be found in the [`experiments` folder](./experiments). Check the folder for details.
