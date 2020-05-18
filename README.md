@@ -25,7 +25,8 @@ An example can be found [here](./controldiffeq/example.py), which demonstrates h
 Everything to reproduce the experiments of the paper can be found in the [`experiments` folder](./experiments). Check the folder for details.
 
 ### Requirements
-Tested with:
+We used:
++ Ubuntu 18.04.4 LTS
 + Python 3.7
 + PyTorch 1.3.1
 + torchaudio 0.3.2
