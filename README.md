@@ -25,7 +25,11 @@ An example can be found [here](./controldiffeq/example.py), which demonstrates h
 Everything to reproduce the experiments of the paper can be found in the [`experiments` folder](./experiments). Check the folder for details.
 
 ### Requirements
-Tested with Python 3.7 and PyTorch 1.3.1, but more recent versions are likely to work as well.
+Tested with:
++ Python 3.7
++ PyTorch 1.3.1
++ Sklearn 0.22.1
+but more recent versions are likely to work as well.
 
 ### Citation
 ```bibtex
