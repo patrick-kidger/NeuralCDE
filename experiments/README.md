@@ -24,6 +24,7 @@ Train and evaluate a Neural CDE model on the speech commands dataset, return a r
 import speech_commands
 result = speech_commands.main(model_name='ncde', hidden_channels=90, 
                               hidden_hidden_channels=40, num_hidden_layers=4)
+print(result.keys())  # things we can inspect
 print(result.test_metrics.accuracy)
 ```
 `hidden_channels` is the size of the hidden state. `hidden_hidden_channels` and `num_hidden_layers` describe the size of the feedforward network parameterising the vector fields of the Neural CDE and ODE-RNN models.
