@@ -30,6 +30,13 @@ An example can be found [here](./example/example.py), which demonstrates how to 
 ### Reproducing experiments
 Everything to reproduce the experiments of the paper can be found in the [`experiments` folder](./experiments). Check the folder for details.
 
+### Results
+As an example (taken from the paper - have a look there for similar results on other datasets):
+
+<p align="center">
+<img align="middle" src="./imgs/ct.png" width="666" />
+</p>
+
 ### Citation
 ```bibtex
 @article{kidger2020neuralcde,
