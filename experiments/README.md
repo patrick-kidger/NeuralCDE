@@ -8,7 +8,6 @@ A lot of repositories tend to use command-line interfaces for running scripts - 
 We used:
 + Ubuntu 18.04.4 LTS
 + Python 3.7
-
 + PyTorch 1.3.1
 + torchaudio 0.3.2
 + torchdiffeq 0.0.1
