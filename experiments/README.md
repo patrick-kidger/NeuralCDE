@@ -8,6 +8,7 @@ A lot of repositories tend to use command-line interfaces for running scripts - 
 We used:
 + Ubuntu 18.04.4 LTS
 + Python 3.7
+
 + PyTorch 1.3.1
 + torchaudio 0.3.2
 + torchdiffeq 0.0.1
@@ -15,7 +16,7 @@ We used:
 + sktime 0.3.1
 + tqdm 4.42.1
 
-But more recent versions are likely to work as well.
+But more recent versions are likely to work as well. Installing these through `conda` or `pip` should be straightforward as usual.
 
 ### Example
 
