@@ -1,6 +1,6 @@
 <h1 align='center'> Neural Controlled Differential Equations<br>
     for Irregular Time Series<br>
-    [<a href="https://arxiv.org/abs/2005.08926">arXiv</a>] </h1>
+    [<a href="https://arxiv.org/abs/2005.08926">arXiv</a>, <a href="https://www.youtube.com/watch?v=sbcIKugElZ4">YouTube</a>] </h1>
 
 <p align="center">
 <img align="middle" src="./imgs/main.png" width="666" />
