@@ -11,17 +11,50 @@ Building on the well-understood mathematical theory of _controlled differential 
 + May be trained with memory-efficient adjoint backpropagation - even across observations.
 + Demonstrate state-of-the-art performance.
 
-They are straightforward to implement and evaluate using existing tools, in particular PyTorch and the [`torchdiffeq`](https://github.com/rtqichen/torchdiffeq) library.
-
-Code for reproducing experiments is provided, as well as a convenience library `controldiffeq` to make computing Neural CDEs easy.
+They are straightforward to implement and evaluate using existing tools, in particular PyTorch and the [`torchcde`](https://github.com/patrick-kidger/torchcde) library.
 
 ----
 
 ### Library
-The library is in the [`controldiffeq` folder](./controldiffeq), which may be imported as a Python module: `import controldiffeq`. Check the folder for details on how to use it.
+See [`torchcde`](https://github.com/patrick-kidger/torchcde).
 
-### Quick example
-An example can be found [here](./example/example.py), which demonstrates how to train a Neural CDE to detect the chirality (clockwise/anticlockwise) of a spiral.
+### Example
+We encourage looking at [example.py](https://github.com/patrick-kidger/torchcde/blob/master/example/example.py), which demonstrates how to use the library to train a Neural CDE model to predict the chirality of a spiral.
+
+Also see [irregular_data.py](https://github.com/patrick-kidger/torchcde/blob/master/example/irregular_data.py), for demonstrations on how to handle variable-length inputs, irregular sampling, or missing data, all of which can be handled easily, without changing the model.
+
+A self contained short example:
+```python
+import torch
+import torchcde
+
+# Create some data
+batch, length, input_channels = 1, 10, 2
+hidden_channels = 3
+t = torch.linspace(0, 1, length)
+t_ = t.unsqueeze(0).unsqueeze(-1).expand(batch, length, 1)
+x_ = torch.rand(batch, length, input_channels - 1)
+x = torch.cat([t_, x_], dim=2)  # include time as a channel
+
+# Interpolate it
+coeffs = torchcde.natural_cubic_spline_coeffs(x)
+X = torchcde.NaturalCubicSpline(coeffs)
+
+# Create the Neural CDE system
+class F(torch.nn.Module):
+    def __init__(self):
+        super(F, self).__init__()
+        self.linear = torch.nn.Linear(hidden_channels, 
+                                      hidden_channels * input_channels)
+    def forward(self, t, z):
+        return self.linear(z).view(batch, hidden_channels, input_channels)
+
+func = F()
+z0 = torch.rand(batch, hidden_channels)
+
+# Integrate it
+torchcde.cdeint(X=X, func=func, z0=z0, t=X.interval)
+```
 
 <p align="center">
 <img align="middle" src="./imgs/spiral.png" width="666" />
