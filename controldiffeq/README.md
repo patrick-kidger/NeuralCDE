@@ -1,3 +1,10 @@
+# New library
+
+We've put together a much better, cleaner library than this now: [torchcde](https://github.com/patrick-kidger/torchcde).
+Go use that instead!
+
+---
+
 # controldiffeq
 
 The mathematical theory of controlled differential equations is largely concerned with _rough controls_, which are quite hard to integrate.
