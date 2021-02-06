@@ -73,9 +73,9 @@ As an example (taken from the paper - have a look there for similar results on o
 ### Citation
 ```bibtex
 @article{kidger2020neuralcde,
+    title={{N}eural {C}ontrolled {D}ifferential {E}quations for {I}rregular {T}ime {S}eries},
     author={Kidger, Patrick and Morrill, James and Foster, James and Lyons, Terry},
-    title={{Neural Controlled Differential Equations for Irregular Time Series}},
-    year={2020},
-    journal={arXiv:2005.08926}
+    journal={Advances in Neural Information Processing Systems},
+    year={2020}
 }
 ```
