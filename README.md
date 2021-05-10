@@ -1,5 +1,4 @@
-<h1 align='center'> Neural Controlled Differential Equations<br>
-    for Irregular Time Series<br>
+<h1 align='center'> Neural Controlled Differential Equationsfor Irregular Time Series<br>(NeurIPS 2020 Spotlight)<br>
     [<a href="https://arxiv.org/abs/2005.08926">arXiv</a>, <a href="https://www.youtube.com/watch?v=sbcIKugElZ4">YouTube</a>] </h1>
 
 <p align="center">
